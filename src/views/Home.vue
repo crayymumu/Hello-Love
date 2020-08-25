@@ -1,8 +1,12 @@
 <template>
   <div class="open-mail">
     <div v-if="open" class="open-content" @click="openAction">
-      <h3 class="title">致 Souler 一封信</h3>
-      <p class="desc">轻启</p>
+      <h3 class="title">
+        致 Souler 一封信
+      </h3>
+      <p class="desc">
+        轻启
+      </p>
       <canvas ref="mail" class="canvas-mail" />
     </div>
     <card v-else />

@@ -28,9 +28,25 @@ module.exports = {
       alias: {
         '@': resolve('src')
       }
-    }
+    },
     // externals: {
     //   'rough': 'rough'
     // }
+  },
+  chainWebpack(config) {
+    config.resolve.alias
+      .set('@', resolve('src'))
+
+    config.plugins.delete('preload') // TODO: need test
+    config.plugins.delete('prefetch') // TODO: need test
+    config.module
+      .rule('vue')
+      .use('vue-loader')
+      .loader('vue-loader')
+      .tap(options => {
+        options.compilerOptions.preserveWhitespace = true
+        return options
+      })
+      .end()
   }
 }
