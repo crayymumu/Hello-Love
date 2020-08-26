@@ -26,7 +26,7 @@ export default {
     return {
       elevation: store.elevation,
       musicStatus: false,
-      audio: 'https://cdn.jsdelivr.net/gh/JaxsonWang/jaxsonwang.github.io@master/assets/Richard%20Sanderson%20-%20Reality.mp3'
+      audio: 'https://blog-oss-file.oss-cn-shanghai.aliyuncs.com/blog-fileimages/Secret.mp3'
     }
   },
   mounted() {
