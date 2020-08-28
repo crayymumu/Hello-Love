@@ -1,8 +1,21 @@
 <template>
   <div id="app">
     <div ref="app-container" class="app-container">
-      <music-btn class="music-btn" />
-      <router-view />
+      <template v-if="pass">
+        <music-btn class="music-btn" />
+        <router-view />
+      </template>
+      <div v-else class="input-container">
+        <div>
+          <wired-input ref="birthdayInput" placeholder="Please enter birthday" />
+          <wired-button @click="handleCheck">确认</wired-button>
+        </div>
+      </div>
+      <wired-dialog :open="dialogDisplay">
+        <p>
+          对不起，有缘人的位数是八哦~
+        </p>
+      </wired-dialog>
     </div>
     <loading />
   </div>
@@ -11,14 +24,44 @@
 import MusicBtn from '@/components/MusicBtn'
 import Loading from '@/components/Loading'
 import { initCanvas } from '@/utils/canvas'
+import WiredInput from 'wired-input'
+import WiredButton from 'wired-button'
+import WiredDialog from 'wired-dialog'
+import md5 from 'blueimp-md5'
 
 export default {
   components: {
     MusicBtn,
-    Loading
+    Loading,
+    WiredInput,
+    WiredButton,
+    WiredDialog,
+  },
+  data() {
+    return {
+      pass: false,
+      dialogDisplay: false
+    }
   },
   mounted() {
     initCanvas(this.$refs['app-container'])
+  },
+  methods: {
+    handleCheck() {
+      const passwordAdd = md5(this.$refs.birthdayInput.value)
+      console.log('birthday')
+      console.log(md5('birthday'))
+      if (passwordAdd === '085ec6b0e1a8771c5f8b0b66f1160071' ||
+        passwordAdd === '00b8bb41da3808d555efeefb60423e55' ||
+        passwordAdd === 'cf673f7ee88828c9fb8f6acf2cb08403') {
+        this.pass = true
+      } else {
+        this.dialogDisplay = true
+        setTimeout(() => {
+          this.dialogDisplay = false
+        }, 2000)
+      }
+    }
   }
 }
 </script>
@@ -35,6 +78,13 @@ body,
     top: 0;
     left: 0;
     z-index: -1;
+  }
+  .input-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    justify-content:center;
   }
 }
 </style>
