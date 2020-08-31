@@ -8,7 +8,9 @@
       <div v-else class="input-container">
         <div>
           <wired-input ref="birthdayInput" placeholder="Please enter birthday" />
-          <wired-button @click="handleCheck">确认</wired-button>
+          <wired-button @click="handleCheck">
+            确认
+          </wired-button>
         </div>
       </div>
       <wired-dialog :open="dialogDisplay">
