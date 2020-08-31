@@ -49,8 +49,6 @@ export default {
   methods: {
     handleCheck() {
       const passwordAdd = md5(this.$refs.birthdayInput.value)
-      console.log('birthday')
-      console.log(md5('birthday'))
       if (passwordAdd === '085ec6b0e1a8771c5f8b0b66f1160071' ||
         passwordAdd === '00b8bb41da3808d555efeefb60423e55' ||
         passwordAdd === 'cf673f7ee88828c9fb8f6acf2cb08403') {
