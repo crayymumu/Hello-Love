@@ -13,7 +13,7 @@
       </div>
       <wired-dialog :open="dialogDisplay">
         <p>
-          对不起，有缘人的位数是八哦~
+          这是一道显而易见的谜题，提示就是显而易见。
         </p>
       </wired-dialog>
     </div>
