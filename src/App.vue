@@ -15,7 +15,7 @@
       </div>
       <wired-dialog :open="dialogDisplay">
         <p>
-          这是一道显而易见的谜题，提示就是显而易见。
+          显而易见
         </p>
       </wired-dialog>
     </div>
@@ -52,7 +52,6 @@ export default {
     handleCheck() {
       const passwordAdd = md5(this.$refs.birthdayInput.value)
       if (passwordAdd === '085ec6b0e1a8771c5f8b0b66f1160071' ||
-        passwordAdd === '00b8bb41da3808d555efeefb60423e55' ||
         passwordAdd === 'cf673f7ee88828c9fb8f6acf2cb08403') {
         this.pass = true
       } else {
