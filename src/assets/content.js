@@ -1,4 +1,12 @@
+  // src: url("https://blog-oss-file.oss-cn-shanghai.aliyuncs.com/blog-fileimages/fzpx/fzpx.eot"); /* IE9 */
+  // src: url("https://blog-oss-file.oss-cn-shanghai.aliyuncs.com/blog-fileimages/fzpx/fzpx.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  //
+  // url("https://blog-oss-file.oss-cn-shanghai.aliyuncs.com/blog-fileimages/fzpx/fzpx.woff") format("woff"), /* chrome、firefox */
+  // url("https://blog-oss-file.oss-cn-shanghai.aliyuncs.com/blog-fileimages/fzpx/fzpx.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+  //
+  // ur l("https://blog-oss-file.oss-cn-shanghai.aliyuncs.com/blog-fileimages/fzpx/fzpx.svg#fzpx") format("svg"); /* iOS 4.1- */
 export  const content = [
+  '那个很想要的未来，在远处依稀闪烁着一点光，我以前相信它是存在的，并且想尽办法在黑夜的森林里劈出一条路，拼尽全力走到了能走的最远处，可是那个光还是很远，好像更远了。我走不动了，为了让心舒服一些，我坐在地上对自己说，别想了，那道光和我没什么关系。然后坐着坐着，我就躺下去了，睡过去了',
   '伸手摘星，未必成功，但永不脏手',
   '你要相信<br>' +
   '未来要和你共度一生的那个人<br>' +
