@@ -15,7 +15,7 @@
       </div>
       <wired-dialog :open="dialogDisplay">
         <p>
-          请输入
+          错了哦~ 答案很明显呢
         </p>
       </wired-dialog>
     </div>
@@ -51,7 +51,7 @@ export default {
   methods: {
     handleCheck() {
       const passwordAdd = md5(this.$refs.birthdayInput.value)
-      if (passwordAdd === '085ec6b0e1a8771c5f8b0b66f1160071') {
+      if (passwordAdd === 'cf673f7ee88828c9fb8f6acf2cb08403') {
         this.pass = true
       } else {
         this.dialogDisplay = true
