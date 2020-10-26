@@ -2,7 +2,7 @@
   <div class="open-mail">
     <div v-if="open" class="open-content" @click="openAction">
       <h3 class="title">
-        致 Souler 一封信
+        祝你前程似锦
       </h3>
       <p class="desc">
         轻启
