@@ -15,7 +15,7 @@
       </div>
       <wired-dialog :open="dialogDisplay">
         <p>
-          错了哦~ 答案很明显呢
+          再猜猜看嘛，都写出来了，不限制你尝试的次数呢
         </p>
       </wired-dialog>
     </div>
